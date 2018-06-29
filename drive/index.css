@@ -1,8 +1,14 @@
 body {
   background-color: #15153b;
   color: #fff;
-  display: block;
+}
+
+body.about {
   text-align: center;
+}
+
+body.other {
+  text-align: left;
 }
 
 .header {
