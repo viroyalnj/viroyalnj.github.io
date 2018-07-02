@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <script src="./jquery-slim.min.js"></script>
+  <script src="./index.js"></script>
+
+  <title>硬件引导</title>
+</head>
+
+<body class="guide">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#ble-setup").click(function() {
+        bleSetup();
+      });
+    });
+  </script>
+  <header>
+  </header>
+  <main class="container">
+    <ul class="list-unstyled">
+      <li class="media">
+        <p class="mr-3 color-index">①</p>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">插入点烟器</h5>
+          <p>请将设备电源插入点烟器插座，待到电源灯闪烁表示设备启动正常.</p>
+          <img class="picture" src="./plugin.png">
+        </div>
+      </li>
+      <li class="media my-4">
+        <p class="mr-3 color-index">②</p>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">插入点烟器</h5>
+          <p>请将设备电源插入点烟器插座，待到电源灯闪烁表示设备启动正常.</p>
+          <img class="picture" src="./ble.png">
+          <a class="btn" id="ble-setup">进入手机蓝牙设置</a>
+        </div>
+      </li>
+      <li class="media">
+        <p class="mr-3 color-index">③</p>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">插入点烟器</h5>
+          <p>请将设备电源插入点烟器插座，待到电源灯闪烁表示设备启动正常.</p>
+          <img class="picture" src="./tune.png">
+          <a class="btn">进入手机蓝牙设置</a>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
