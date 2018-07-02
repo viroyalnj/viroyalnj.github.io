@@ -16,7 +16,15 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $("#ble-setup").click(function() {
-        bleSetup();
+        bleCall("setup");
+      });
+
+      $("#ble-frequency").click(function() {
+        bleCall("frequency");
+      });
+
+      $("#ble-home").click(function() {
+        bleCall("home");
       });
     });
   </script>
@@ -35,19 +43,29 @@
       <li class="media my-4">
         <p class="mr-3 color-index">②</p>
         <div class="media-body">
-          <h5 class="mt-0 mb-1">插入点烟器</h5>
-          <p>请将设备电源插入点烟器插座，待到电源灯闪烁表示设备启动正常.</p>
+          <h5 class="mt-0 mb-1">手机蓝牙配对</h5>
+          <p>在系统设置中，进入蓝牙设置页面，找到Q11 Audio 和 Q11 Ble 两个蓝牙设备，分别点击连接<br />
+          <small class="text-muted">仅在首次使用时需要手动连接，后续会自动连接</small></p>
           <img class="picture" src="./ble.png">
-          <a class="btn" id="ble-setup">进入手机蓝牙设置</a>
+          <a class="btn btn-outline-primary btn-rounded" id="ble-setup">进入手机蓝牙设置</a>
         </div>
       </li>
       <li class="media">
         <p class="mr-3 color-index">③</p>
         <div class="media-body">
-          <h5 class="mt-0 mb-1">插入点烟器</h5>
-          <p>请将设备电源插入点烟器插座，待到电源灯闪烁表示设备启动正常.</p>
+          <h5 class="mt-0 mb-1">汽车调频</h5>
+          <p>请将汽车收音机的电台频率调到106.2MHz，如果此频率已经被其它广播电台占用或者收听效果不理想，可修改硬件频率到其它频率</p>
           <img class="picture" src="./tune.png">
-          <a class="btn">进入手机蓝牙设置</a>
+          <a class="btn btn-outline-primary btn-rounded" id="ble-frequency">调整电台频率</a>
+        </div>
+      </li>
+      <li class="media">
+        <p class="mr-3 color-index">④</p>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">返回御驾助手首页</h5>
+          <p>一切设置完毕，返回首页</p>
+          <img class="picture" src="./tune.png">
+          <a class="btn btn-primary btn-rounded" id="ble-home">返回御驾首页</a>
         </div>
       </li>
     </ul>

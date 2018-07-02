@@ -9,10 +9,9 @@ function setupWebViewJavascriptBridge(callback) {
   setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
 
-function bleSetup() {
+function bleCall(key) {
   setupWebViewJavascriptBridge(function(bridge) {
-    console.log("Call method bleSetup");
-    bridge.callHandler('bleSetup', { 'key': 'enter_system_ble_setup' }, function responseCallback(responseData) {
+    bridge.callHandler('bleEvent', { 'key': key }, function responseCallback(responseData) {
       console.log("JS received response:", responseData)
     })
   })

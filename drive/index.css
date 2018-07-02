@@ -35,6 +35,14 @@ footer {
   /* Vertically center the text there */
 }
 
+li.media {
+  margin-top: 8px;
+}
+
+hr {
+  color: white;
+}
+
 .color-index {
   font-size: 1.4em;
   color: #f3ae3d;
@@ -43,4 +51,12 @@ footer {
 img.picture {
   width: 80%;
   height: auto;
+}
+
+a.btn-rounded {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 75%;
+  height: 38px;
+  border-radius: 19px;
 }
