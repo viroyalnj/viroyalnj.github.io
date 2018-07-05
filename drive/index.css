@@ -56,7 +56,8 @@ hr {
 }
 
 img.picture {
-  width: auto;
+  width: 85%;
+  max-width: 280px;
   height: auto;
 }
 
