@@ -8,25 +8,24 @@
   <link rel="stylesheet" type="text/css" href="./index.css">
   <script src="./jquery-slim.min.js"></script>
   <script src="./index.js"></script>
-
   <title>硬件引导</title>
 </head>
 
 <body class="guide">
   <script type="text/javascript">
-    $(document).ready(function() {
-      $("#ble-setup").click(function() {
-        bleCall("setup");
-      });
-
-      $("#ble-frequency").click(function() {
-        bleCall("frequency");
-      });
-
-      $("#ble-home").click(function() {
-        bleCall("home");
-      });
+  $(document).ready(function() {
+    $("#ble-setup").click(function() {
+      bleCall("setup");
     });
+
+    $("#ble-frequency").click(function() {
+      bleCall("frequency");
+    });
+
+    $("#ble-home").click(function() {
+      bleCall("home");
+    });
+  });
   </script>
   <header>
   </header>
@@ -44,10 +43,18 @@
         <p class="mr-3 color-index">②</p>
         <div class="media-body">
           <h5 class="mt-0 mb-1">手机蓝牙配对</h5>
-          <p>在系统设置中，进入蓝牙设置页面，找到 Yujia_Audio 和 Yujia_Ble 两个蓝牙设备，分别点击连接<br />
-          <small class="text-muted">仅在首次使用时需要手动连接，后续会自动连接</small></p>
+          <p>在设备接入电源后，其会创建两个蓝牙接口，分别为 Yujia_Ble 和 Yujia_Audio，它们用途不同，连接方式也不同:</p>
+          <ul>
+            <li>
+              <p>Yujia_Ble 由御驾助手 app 自动连接，只需要启动御驾助手 app，稍等片刻就能连接成功。<small class="text-muted">如果连接失败，可以通过重启app、重启手机的方式重试</small></p>
+            </li>
+            <li>
+              <p>Yujia_Audio 需要用户手动连接，在手机蓝牙列表中，找到 Yujia_Audio 后点击连接就可以完成。<small class="text-muted">只在第一次时需要手动连接，此后便会自动连接</small></p>
+              <a class="btn btn-outline-primary btn-rounded" id="ble-setup">进入手机蓝牙设置</a>
+            </li>
+          </ul>
+          蓝牙连接成功后，应该是如下图所示:
           <img class="picture" src="./ble.png">
-          <a class="btn btn-outline-primary btn-rounded" id="ble-setup">进入手机蓝牙设置</a>
         </div>
       </li>
       <li class="media">
